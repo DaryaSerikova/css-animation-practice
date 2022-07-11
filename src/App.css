@@ -1,4 +1,276 @@
 .App {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper-blocks {
+  display: flex;
+  flex-direction: row;
+}
+
+.block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8rem;
+  height: 8rem;
+  margin: 2rem;
+  padding: 0.5rem;
+  background-color: rgb(202, 229, 255);
+  box-shadow: 1px 2px 12px 0px #00000073;
+}
+
+.name {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 1rem 0 2rem;
+}
+
+.rotate45 {
+  transform: rotate(45deg);
+}
+
+.rotate150 {
+  transform: rotate(45deg);
+}
+
+.rotateX45 {
+  transform: rotateX(45deg);
+}
+
+.rotateY45 {
+  transform: rotateY(45deg);
+}
+
+.rotateX150 {
+  transform: rotateX(150deg);
+}
+
+.rotateY150 {
+  transform: rotateY(150deg); 
+  transform-origin: 0% 0 0; /*можно поменять ось поворота*/
+}
+
+.scale1 {
+  transform: scale(1.2);
+}
+
+.scale2 {
+  transform: scale(2);
+}
+
+.scale3 {
+  transform: scale(1);
+}
+
+.scale4 {
+  transform: scale(0.7);
+}
+
+.scale5 {
+  transform: scale(-1);
+}
+
+.scale6 {
+  transform: scale(1.5, 2);
+}
+
+
+
+.skew1 {
+  transform: skew(30deg, 0);
+}
+
+.skew2 {
+  transform: skew(0, 30deg);
+}
+
+.skew3 {
+  transform: skew(10deg, 10deg);
+}
+
+.skew4 {
+  transform: skewX(25deg);
+}
+
+.skew5 {
+  transform: skewY(25deg);
+}
+
+
+.translate1 {
+  transform: translate(30px, 0);
+}
+
+.translate2 {
+  transform: translate(0, 30px);
+}
+
+.translate3 {
+  transform: translate(-15px, 30px);
+}
+
+.translate4 {
+  transform: translate(0, 0);
+}
+
+.perspective1 {
+  transform: perspective(200px) rotateY(30deg);
+}
+
+.perspective2 {
+  transform: perspective(500px) rotateY(30deg);
+}
+
+/* .perspective3 {
+  transform: perspective(500px) rotateY(50deg);
+} */
+
+.perspective4 {
+  transform: perspective(500px) rotateY(150deg);
+}
+
+.perspective5 {
+  transform: perspective(500px) rotateY(-50deg);
+}
+
+.perspective6 {
+  transform: perspective(500px) rotateX(50deg);
+}
+
+
+.backface-visibility1 {
+  margin: 0.8rem;
+  transform: perspective(500px) rotateY(30deg);
+  backface-visibility: visible;
+}
+
+.backface-visibility2 {
+  margin: 0.8rem;
+  transform: perspective(500px) rotateY(55deg) ;
+  backface-visibility: visible;
+}
+
+.backface-visibility3 {
+  margin: 0.8rem;
+
+  transform: perspective(500px) rotateY(80deg) ;
+  backface-visibility: hidden;
+}
+
+.backface-visibility4 {
+  margin: 0.8rem;
+
+  transform: perspective(500px) rotateY(100deg) ;
+  backface-visibility: visible;
+}
+
+.backface-visibility5 {
+  margin: 0.8rem;
+
+  transform: perspective(500px) rotateY(125deg) ;
+  backface-visibility: visible;
+}
+
+.backface-visibility6 {
+  margin: 0.8rem;
+  transform: perspective(500px) rotateY(150deg) ;
+  backface-visibility: visible;
+}
+
+
+.transition1 {
+  margin: 1rem;
+  background-color: rgb(250, 206, 206);
+  transform: perspective(500px) rotateY(0deg);
+  transition-property: background-color, transform;
+  transition-duration: 1s;
+}
+
+.transition1:hover {
+  background-color: rgb(252, 112, 112);
+  transform: perspective(500px) rotateY(180deg);
+
+}
+
+
+.transition2 {
+  margin: 1rem;
+
+  /* background-color: rgb(250, 206, 206); */
+  transform: perspective(500px) rotateX(0deg);
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+.transition2:hover {
+  /* background-color: rgb(252, 112, 112); */
+  transform: perspective(500px) rotateX(180deg);
+}
+
+
+.transition3 {
+  margin: 1rem;
+
+  /* background-color: rgb(250, 206, 206); */
+  transform: perspective(500px) rotateX(0deg);
+  transition-property: transform;
+  transition-duration: 0.7s;
+}
+
+.transition3:hover {
+  /* background-color: rgb(252, 112, 112); */
+  transform: perspective(500px) rotateX(30deg);
+}
+
+
+.transition4 {
+  margin: 1rem;
+
+  /* background-color: rgb(250, 206, 206); */
+  transform: perspective(500px) rotateX(0deg);
+  transition-property: transform;
+  transition-duration: 0.7s;
+}
+
+.transition4:hover {
+  /* background-color: rgb(252, 112, 112); */
+  transform: perspective(500px) skew(30deg, 0);
+}
+
+.transition5 {
+  margin: 1rem;
+
+  /* background-color: rgb(250, 206, 206); */
+  transform: perspective(500px) translate(0, 0);
+  transition-property: transform;
+  transition-duration: 0.5s;
+}
+
+.transition5:hover {
+  /* background-color: rgb(252, 112, 112); */
+  transform: perspective(500px) translate(0, 50px);
+}
+
+.transition6 {
+  margin: 1rem;
+
+  /* background-color: rgb(250, 206, 206); */
+  transform: perspective(500px) translateZ(0);
+  transition-property: transform;
+  transition-duration: 0.5s;
+}
+
+.transition6:hover {
+  /* background-color: rgb(252, 112, 112); */
+  transform: perspective(500px) translateZ(-50px);
+}
+
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +307,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
